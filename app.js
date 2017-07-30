@@ -19,3 +19,18 @@ function superPrint (input) {
     print(i)
   }
 }
+
+//standard jquery syntax
+$(document).ready(function(){
+  //code
+  //$('element, ID or class').function('argument', 'argument');
+})
+
+$(function(){
+  //codez
+})
+
+//short arrow functon
+$(() => {
+  $('p').css('background-color', '#6660aa');
+})
