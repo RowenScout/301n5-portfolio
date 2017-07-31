@@ -2,11 +2,11 @@
 
 var projects = [];
 
-function Project(name, description, imgSrc, date) {
-  this.name = name;
-  this.description = description;
-  this.imgSrc = imgSrc;
-  this.date = date;
+function Project(rawData) {
+  this.title = rawData.title;
+  this.description = rawData.description;
+  this.imgSrc = rawData.imgSrc;
+  this.date = rawData.date;
   projects.push(this);
 }
 
@@ -14,7 +14,7 @@ function print (input) {
   //jquery magic goes here
 }
 
-function superPrint (input) {
+function superPrint () {
   for (var i = 0; i < projects.length; i++) {
     print(i)
   }
