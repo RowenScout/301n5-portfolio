@@ -1,10 +1,26 @@
-.icoLink{
-  height: 100px;
-  width: 100px;
+*{
+  background-color: darkgrey;
+}
+
+img{
+  background-color: white;
+}
+
+.icoLink {
+  height: 75px;
+  width: 75px;
+  float: right;
+  display: inline;
+}
+
+.pull-left {
+  float: left;
 }
 
 section {
   display: inline;
+  border: solid;
+  padding: 5px;
 }
 
 .thumbnail {
