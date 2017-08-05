@@ -22,6 +22,14 @@
         <img src="assets/fb.png" alt="facebook" href="www.facebook.com/rowenscout" class="icoLink" class="pull-right">
       </div>
     </div>
+    <script id="entry-template" type="text/x-handlebars-template">
+    <div class="entry">
+      <h1>{{title}}</h1>
+      <div class="description">
+        {{description}}
+      </div>
+    </div>
+  </script>
   </head>
   <body>
     <article ID="article" class="template" class="data">
@@ -39,6 +47,7 @@
       <li>Moved to Seattle in 2009</li>
       <li>Loves video games</li>
     </ul>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
     <script src="scripts/raw.js"></script>
     <script src="scripts/app.js"></script>
