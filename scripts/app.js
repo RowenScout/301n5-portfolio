@@ -4,7 +4,7 @@ var projects = [];
 
 function Project(rawData) {
   this.title = rawData.title;
-  this.description = rawData.description;
+  this.body = rawData.body;
   this.imgSrc = rawData.imgSrc;
   this.date = rawData.publishedOn;
   this.link = rawData.link;
@@ -30,19 +30,19 @@ rawData.forEach(function(projectObj) {
 });
 
 projects.forEach(function(project) {
-  $('#article').append(project.toHtml());
+  $('#projects').append(project.toHtml());
 });
 
 
-// var handleNavBar = function() {
-//   $('section').on('click', function(){
-//     $('.data').hide();
-//     var dataCat = $(this).attr('data-category');
-//     $('.data[id="' + dataCat + '"]').show();
-//     console.log($(this).attr('data-category'));
-//   }
-// )};
-//
-// $(document).ready(function() {
-//   handleNavBar();
-// });
+var handleNavBar = function() {
+  $('section').on('click', function(){
+    $('.data').hide();
+    var dataCat = $(this).attr('data-category');
+    $('.data[id="' + dataCat + '"]').show();
+    console.log($(this).attr('data-category'));
+  }
+)};
+
+$(document).ready(function() {
+  handleNavBar();
+});
