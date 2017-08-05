@@ -2,28 +2,49 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="styles/layout.css">
+    <link rel="stylesheet" type="text/css" href="styles/module.css">
+    <link rel="stylesheet" type="text/css" href="styles/base.css">
     <title>rowenscout</title>
     <div class="navbar">
-      <section class="thumbnail">
-        <span class="title">Title1</span>
+      <section class="home" class="pull-left" data-category="article">
+        <span class="title">Home</span>
       </section>
-      <section class="thumbnail">
-        <span class="title">Title1</span>
+      <section class="about" class="pull-left" data-category="about">
+        <span class="title">About</span>
       </section>
-      <section class="thumbnail">
-        <span class="title">Title1</span>
+      <section class="thumbnail" class="pull-left">
+        <span class="title">Contact</span>
       </section>
+      <div class="contactBar">
+        <img src="assets/linkedin.png" alt="github" href="www.github.com/rowenscout" class="icoLink" class="pull-right">
+        <img src="assets/fb.png" alt="facebook" href="www.facebook.com/rowenscout" class="icoLink" class="pull-right">
+      </div>
     </div>
+    <script id="entry-template" type="text/x-handlebars-template">
+    <div class="entry">
+      <h1>{{title}}</h1>
+      <div class="description">
+        {{body}}
+        <img src={{imgSrc}}>
+      </div>
+      <a href={{link}}>{{link}}</a>
+    </div>
+  </script>
   </head>
+  <body id="projects"></body>
   <body>
-  <div class="contactBar">
-    <img src="assets/icons/github.img" alt="github" href="www.github.com/rowenscout">
-    <img src="assets/icons/facebook.img" alt="facebook" href="www.facebook.com/rowenscout">
-  </div>
-  <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
-  <script rel="stylesheet" src="app.js"></script>
-  <script rel="stylesheet" src="layout.css"></script>
-  <script rel="stylesheet" src="module.css"></script>
-  <script rel="stylesheet" src="base.css"></script>
+
+
+    <ul ID="about" class="data">
+      <li>From Kentucky</li>
+      <li>Moved to Seattle in 2009</li>
+      <li>Loves video games</li>
+    </ul>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="scripts/raw.js"></script>
+    <script src="scripts/app.js"></script>
   </body>
 </html>
