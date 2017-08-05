@@ -20,7 +20,7 @@ Project.prototype.toHtml = function() {
   $newProject.find('a.link').attr("href", this.link);
   $newProject.find('article').attr("data-category", this.category);
   $newProject.find('article').attr("id", "data");
-  return $newProject;
+  return $newProject
 }
 
 rawData.forEach(function(projectObj) {
