@@ -1,3 +1,26 @@
-.template {
-  display: none;
+section {
+  display: inline;
+  border: solid;
+  padding: 5px;
+}
+
+img{
+  background-color: white;
+}
+
+*{
+  background-color: darkgrey;
+}
+
+head, div, body, a {
+  width: 80%;
+  margin: auto;
+}
+
+ul{
+  margin-left: 10%;
+}
+
+article {
+
 }

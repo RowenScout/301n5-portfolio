@@ -1,17 +1,14 @@
-*{
-  background-color: darkgrey;
+.navItem{
+  width: 100%;
 }
 
-.template {
-
+.navbar{
+  width: 100%;
+  margin-left: 20%;
 }
 
 .pubdate{
   float:right;
-}
-
-img{
-  background-color: white;
 }
 
 .icoLink {
@@ -23,19 +20,4 @@ img{
 
 .pull-left {
   float: left;
-}
-
-section {
-  display: inline;
-  border: solid;
-  padding: 5px;
-}
-
-.thumbnail {
-
-
-}
-
-article {
-
 }
