@@ -15,16 +15,11 @@ Project.prototype.toHtml = function() {
   var template = Handlebars.compile(source);
 }
 
-projects.forEach(function(project) {
-  $('#projects').append(project.toHtml());
-});
-
-
 var handleNavBar = function() {
   $('section').on('click', function(){
     $('.data').hide();
     var dataCat = $(this).attr('data-category');
-    $('.data[id="' + dataCat +  '"]').show();
+    $('.data[id="' + dataCat + '"]').show();
     console.log($(this).attr('data-category'));
   }
 )};
@@ -47,6 +42,10 @@ function load (rawJson){
 }
 
 $(document).ready(function() {
-  load();
+  load(JSON.parse(localStorage.rawData));
+  projects.forEach(function(project) {
+    $('#projects').append(project.toHtml());
+  });
+
   handleNavBar();
 });
