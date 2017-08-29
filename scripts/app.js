@@ -36,7 +36,7 @@ Project.fetch = function() {
 }
 
 function load (rawJson){
-  rawJson.forEach(function(foo) {
+  rawJson.map(function(foo) {
     projects.push(new Project(foo));
   })
 }
