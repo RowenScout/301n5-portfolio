@@ -37,8 +37,10 @@ projects.forEach(function(project) {
 var handleNavBar = function() {
   $('section').on('click', function(){
     $('.data').hide();
+    $('.template').hide();
     var dataCat = $(this).attr('data-category');
-    $('.data[id="' + dataCat + '"]').show();
+    $('#' + dataCat + ".template").show();
+    $('#' + dataCat).show();
     console.log($(this).attr('data-category'));
   }
 )};
