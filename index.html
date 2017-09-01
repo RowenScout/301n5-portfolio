@@ -23,15 +23,18 @@
       </div>
     </div>
     <script id="entry-template" type="text/x-handlebars-template">
-    <div class="entry">
-      <h1>{{title}}</h1>
-      <div class="description">
-        {{body}}
-        <img src={{imgSrc}}>
-      </div>
-      <a href={{link}}>{{link}}</a>
-    </div>
-  </script>
+      <li>
+        <a href="{{html_url}}" target="_blank">
+          <h3>{{name}}</h3>
+        </a>
+        <p>Description: {{description}}</p>
+        <p>Created: {{created_at}}</p>
+        <p>Updated: {{updated_at}}</p>
+        {{#if watchers_count}}
+          <p>{{watchers_count}} others viewing this page</p>
+        {{/if}}
+      </li>
+      </script>
   </head>
   <body id="projects"></body>
   <body>
@@ -43,7 +46,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
-    <script src="scripts/raw.js"></script>
     <script src="scripts/app.js"></script>
+    <script src="/scripts/repo.js"></script>
+    <script type="text/javascript" src="githubtoken.js"></script>
   </body>
 </html>
