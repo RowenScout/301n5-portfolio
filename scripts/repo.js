@@ -9,5 +9,8 @@ $.ajax({
   console.log(response);
   response.map(eachRepo => {
     repos.push(new Article(eachRepo))
+    repos.forEach(function(input) {
+      $('#handlebars-entry').append(input.toHtml());
+    })
   })
 })

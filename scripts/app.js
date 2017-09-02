@@ -17,10 +17,6 @@ Article.prototype.toHtml = function() {
   return template(this);
 }
 
-repos.forEach(function(input) {
-  $('#handlebars-entry').append(input.toHtml());
-});
-
 Article.handleNavBar = function() {
   $('section').on('click', function(){
     $('.data').hide();
