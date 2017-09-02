@@ -1,48 +1,27 @@
 "use strict";
 
-var projects = [];
+var app = app || {};
 
-function Project(rawData) {
-  this.title = rawData.title;
-  this.body = rawData.body;
-  this.imgSrc = rawData.imgSrc;
-  this.date = rawData.publishedOn;
-  this.link = rawData.link;
+var repos = [];
+
+function Article (input){
+  this.name = input.name;
+  this.update = input.updated_at;
+  this.url = input.url;
+  this.ipsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum";
 }
 
-Project.prototype.toHtml = function() {
-  // var $newProject = $('article.template').clone();
-  // $newProject.find('h1').text(this.title);
-  // $newProject.find('body').html(this.body);
-  // $newProject.find('img').attr("src", this.image);
-  // $newProject.find('span.pubdate').text(this.date);
-  // $newProject.find('a.link').html(this.link);
-  // $newProject.find('a.link').attr("href", this.link);
-  // $newProject.find('article').attr("data-category", this.category);
-  // $newProject.find('article').attr("id", "data");
+Article.prototype.toHtml = function() {
   var source   = $("#entry-template").html();
   var template = Handlebars.compile(source);
   return template(this);
 }
 
-rawData.forEach(function(projectObj) {
-  projects.push(new Project(projectObj));
-});
-
-projects.forEach(function(project) {
-  $('#projects').append(project.toHtml());
-});
-
-
-var handleNavBar = function() {
+Article.handleNavBar = function() {
   $('section').on('click', function(){
     $('.data').hide();
     var dataCat = $(this).attr('data-category');
     $('.data[id="' + dataCat + '"]').show();
     console.log($(this).attr('data-category'));
   }
-)};
-
-$(document).ready(function() {
-  handleNavBar();
-});
+)}

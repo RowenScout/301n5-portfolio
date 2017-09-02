@@ -8,13 +8,13 @@
     <link rel="stylesheet" type="text/css" href="styles/base.css">
     <title>rowenscout</title>
     <div class="navbar">
-      <section class="home" class="pull-left" data-category="article">
+      <section class="home" class="pull-left" class="navItem" data-category="article">
         <span class="title">Home</span>
       </section>
-      <section class="about" class="pull-left" data-category="about">
+      <section class="about" class="pull-left" class="navItem" data-category="about">
         <span class="title">About</span>
       </section>
-      <section class="thumbnail" class="pull-left">
+      <section class="thumbnail" class="pull-left" class="navItem">
         <span class="title">Contact</span>
       </section>
       <div class="contactBar">
@@ -24,27 +24,26 @@
     </div>
     <script id="entry-template" type="text/x-handlebars-template">
     <div class="entry">
-      <h1>{{title}}</h1>
+      <h1>{{name}}</h1>
       <div class="description">
-        {{body}}
-        <img src={{imgSrc}}>
+        {{ipsum}}
       </div>
-      <a href={{link}}>{{link}}</a>
+      <a href={{url}}>{{url}}</a>
     </div>
-  </script>
+  </script></script>
   </head>
-  <body id="projects"></body>
+  <body id="handlebars-entry"></body>
   <body>
-
-
     <ul ID="about" class="data">
       <li>From Kentucky</li>
       <li>Moved to Seattle in 2009</li>
       <li>Loves video games</li>
     </ul>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
-    <script src="scripts/raw.js"></script>
+    <script src="/scripts/repo.js"></script>
     <script src="scripts/app.js"></script>
+    <script type="text/javascript" src="githubtoken.js"></script>
   </body>
 </html>
