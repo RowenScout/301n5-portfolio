@@ -23,20 +23,16 @@
       </div>
     </div>
     <script id="entry-template" type="text/x-handlebars-template">
-      <li>
-        <a href="{{html_url}}" target="_blank">
-          <h3>{{name}}</h3>
-        </a>
-        <p>Description: {{description}}</p>
-        <p>Created: {{created_at}}</p>
-        <p>Updated: {{updated_at}}</p>
-        {{#if watchers_count}}
-          <p>{{watchers_count}} others viewing this page</p>
-        {{/if}}
-      </li>
-      </script>
+    <div class="entry">
+      <h1>{{name}}</h1>
+      <div class="description">
+        {{ipsum}}
+      </div>
+      <a href={{url}}>{{url}}</a>
+    </div>
+  </script></script>
   </head>
-  <body id="projects"></body>
+  <body id="handlebars-entry"></body>
   <body>
     <ul ID="about" class="data">
       <li>From Kentucky</li>
@@ -50,4 +46,7 @@
     <script src="/scripts/repo.js"></script>
     <script type="text/javascript" src="githubtoken.js"></script>
   </body>
+  <script type="text/javascript">
+      handleNavBar();
+  </script>
 </html>
