@@ -1,7 +1,5 @@
 "use strict";
 
-var app = app || {};
-
 var repos = [];
 
 var ipsumRaw = $.ajax({
@@ -11,7 +9,7 @@ var ipsumRaw = $.ajax({
     console.log(json.responseText);
     return(json.responseText)
   }
-})
+});
 
 function Article (input){
   this.name = input.name;
@@ -26,19 +24,9 @@ Article.prototype.toHtml = function() {
   return template(this);
 };
 
-Article.handleNavBar = function() {
-  $('section').on('click', function(){
-    $('.data').hide();
-    var dataCat = $(this).attr('data-category');
-    $('.data[id="' + dataCat + '"]').show();
-    console.log($(this).attr('data-category'));
+var doppelterMorder = repos.reduce(function(foo, bar){
+  if (foo.indexOf(bar) < 0 ) {
+    foo.push(bar)
   }
-)}
-
-Article.doppelganger = function(repos) {
-  repos.reduce(acc, next => {
-    if(acc===next){
-      acc - next;
-    }
-  })
-}
+  return foo;
+},[])
