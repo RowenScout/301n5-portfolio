@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="styles/base.css">
     <title>rowenscout</title>
     <div class="navbar">
-      <section class="home" class="pull-left" class="navItem" data-category="article">
+      <section class="home" class="pull-left" class="navItem" data-category="entry">
         <span class="title">Home</span>
       </section>
       <section class="about" class="pull-left" class="navItem" data-category="about">
@@ -23,18 +23,18 @@
       </div>
     </div>
     <script id="entry-template" type="text/x-handlebars-template">
-    <div class="entry">
-      <h1>{{name}}</h1>
-      <div class="description">
-        {{ipsum}}
+      <div class="entry" class="data">
+        <h1>{{name}}</h1>
+        <div class="description">
+          {{ipsum}}
+        </div>
+        <a href={{url}}>{{url}}</a>
       </div>
-      <a href={{url}}>{{url}}</a>
-    </div>
-  </script>
+    </script>
   </head>
   <body id="handlebars-entry"></body>
   <body>
-    <ul ID="about" class="data">
+    <ul id="about" class="data">
       <li>From Kentucky</li>
       <li>Moved to Seattle in 2009</li>
       <li>Loves video games</li>
@@ -45,6 +45,8 @@
     <script src="/scripts/model.js"></script>
     <script src="scripts/view.js"></script>
     <script src="scripts/controller.js"></script>
-    <script type="text/javascript" src="githubtoken.js"></script>
+    <script type="text/javascript">
+      Article.handleNavBar();
+    </script>
   </body>
 </html>
