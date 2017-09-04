@@ -6,8 +6,9 @@ var Article = Article || {};
 Article.handleNavBar = function() {
   $('section').on('click', function(){
     $('.data').hide();
+    $('.entry').hide();
     var dataCat = $(this).attr('data-category');
-    $('.data[id="' + dataCat + '"]').show();
+    $('#' + dataCat).show();
     console.log($(this).attr('data-category'));
   }
 )};

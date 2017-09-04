@@ -2,7 +2,7 @@
 
 var repos = [];
 
-var ipsumRaw = $.ajax({
+var ipsumJSON = $.ajax({
   'url': "data/ipsum.json",
   'success': function(json) {
     console.log(json);
@@ -15,7 +15,7 @@ function Article (input){
   this.name = input.name;
   this.update = input.updated_at;
   this.url = input.url;
-  this.ipsum = JSON.parse(ipsumRaw.responseText)[0].ipsum;
+  this.ipsum = JSON.parse(ipsumJSON.responseText)[0].ipsum;
 }
 
 Article.prototype.toHtml = function() {
@@ -23,10 +23,3 @@ Article.prototype.toHtml = function() {
   var template = Handlebars.compile(source);
   return template(this);
 };
-
-var doppelterMorder = repos.reduce(function(foo, bar){
-  if (foo.indexOf(bar) < 0 ) {
-    foo.push(bar)
-  }
-  return foo;
-},[])
